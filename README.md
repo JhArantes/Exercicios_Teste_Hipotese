@@ -27,7 +27,6 @@ Configuramos o parâmetro `alternative` no `statsmodels` para três direções:
 * **Pandas**: Manipulação de dados biométricos.
 * **Statsmodels**: Execução de testes Z e testes T.
 * **SciPy**: Cálculos estatísticos complementares.
-* **Matplotlib/Seaborn**: Visualização de distribuições e regiões críticas.
 
 ---
 
