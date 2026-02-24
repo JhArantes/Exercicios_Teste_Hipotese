@@ -1,6 +1,6 @@
 # 🏥 Testes de Hipótese em Dados de Saúde
 
-Este repositório contém uma coleção de exercícios práticos e resolvidos sobre **Testes de Hipótese** aplicados ao contexto da Saúde. O objetivo é demonstrar a aplicação estatística para validar suposições clínicas, eficácia de tratamentos e análise de indicadores populacionais utilizando Python e a biblioteca `statsmodels`.
+Este repositório contém uma coleção de exercícios práticos e resolvidos sobre **Testes de Hipótese** aplicados ao contexto da Saúde. O objetivo é demonstrar a aplicação estatística para validar suposições clínicas, eficácia de tratamentos e análise de indicadores populacionais utilizando Python e a biblioteca `scipy`.
 
 ---
 
@@ -14,7 +14,7 @@ O foco principal é a tomada de decisão estatística baseada em diferentes cen�
 * **Amostras Pareadas (Paired Samples):** Comparação de medidas no mesmo indivíduo em tempos diferentes (ex: Pressão arterial antes e depois do medicamento).
 
 ### 2. Direções da Hipótese Alternativa ($H_1$)
-Configuramos o parâmetro `alternative` no `statsmodels` para três direções:
+Configuramos o parâmetro `alternative` no `scipy` para três direções:
 * `two-sided` (Bilateral): Verifica qualquer diferença.
 * `larger` (Unicaudal à direita): Verifica se o efeito aumentou.
 * `smaller` (Unicaudal à esquerda): Verifica se o efeito diminuiu.
@@ -25,8 +25,7 @@ Configuramos o parâmetro `alternative` no `statsmodels` para três direções:
 
 * **Python 3.x**
 * **Pandas**: Manipulação de dados biométricos.
-* **Statsmodels**: Execução de testes Z e testes T.
-* **SciPy**: Cálculos estatísticos complementares.
+* **SciPy**: Cálculo P valor.
 
 ---
 
@@ -44,17 +43,17 @@ Configuramos o parâmetro `alternative` no `statsmodels` para três direções:
 
 1.  **Clone o repositório:**
     ```bash
-    git clone [https://github.com/seu-usuario/nome-do-repositorio.git](https://github.com/seu-usuario/nome-do-repositorio.git)
+    git clone https://github.com/JhArantes/Exercicios_Teste_Hipotese
     ```
 
 2.  **Instale as dependências:**
     ```bash
-    pip install statsmodels pandas matplotlib
+    pip install scipy pandas matplotlib
     ```
 
 3.  **Exemplo de uso rápido (Teste T Independente):**
     ```python
-    from statsmodels.stats.weightstats import ttest_ind
+    from scipy.stats import ttest_rel, ttest_ind, ttest_1samp, norm
     import pandas as pd
 
     # Exemplo: Nível de glicose entre dois grupos
